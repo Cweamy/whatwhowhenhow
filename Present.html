@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>นำเสนอโครงการ CareConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            background-color: #f1f5f9; 
+            margin: 0; 
+            padding: 40px 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 40px;
+            font-family: 'Kanit', sans-serif; 
+        }
+        .slide { 
+            background-color: #fff; 
+            width: 1280px; 
+            height: 720px; 
+            display: flex; 
+            flex-direction: column; 
+            padding: 60px; 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+        }
+        .slide::before { 
+            content: ''; 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); 
+            z-index: 0; 
+        }
+        .slide > * { position: relative; z-index: 1; }
+
+        h1 { font-size: 72px; color: #003366; margin: 0; line-height: 1.1; font-weight: 700; }
+        h2.slide-title { font-size: 44px; color: #003366; margin-bottom: 30px; border-left: 10px solid #008080; padding-left: 20px; font-weight: 700; }
+        p, li { font-size: 22px; color: #334155; line-height: 1.6; }
+        
+        .accent { color: #008080; font-weight: 700; }
+        .two-col { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; height: 100%; align-items: center; }
+        .tile { background: #fff; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); flex: 1; text-align: center; }
+        .icon { font-size: 50px; color: #008080; margin-bottom: 20px; }
+        
+        .timeline { display: flex; justify-content: space-between; position: relative; margin-top: 100px; }
+        .timeline-line { position: absolute; top: 25px; left: 0; width: 100%; height: 4px; background: #cbd5e1; }
+        .t-item { text-align: center; flex: 1; position: relative; }
+        .t-dot { width: 50px; height: 50px; background: #008080; border-radius: 50%; margin: 0 auto 20px; border: 6px solid #fff; position: relative; z-index: 2; }
+
+        .app-preview-img {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: cover; /* เปลี่ยนเป็น cover หรือ contain ตามความเหมาะสมของภาพจริง */
+            display: block;
+        }
+
+        @media print {
+            body { padding: 0; gap: 0; }
+            .slide { box-shadow: none; page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: หน้าปก -->
+<div class="slide">
+    <div style="margin-top: 100px;">
+        <p class="accent" style="text-transform: uppercase; letter-spacing: 2px;">โครงการพัฒนาระบบเทคโนโลยีเพื่อสังคม</p>
+        <h1>CareConnect:<br>ระบบจองผู้ดูแลผู้สูงอายุ<br>ถึงบ้านแบบครบวงจร</h1>
+        <div style="width: 150px; height: 8px; background: #008080; margin: 40px 0;"></div>
+        <p style="font-size: 28px;">เชื่อมโยงครอบครัวและผู้ดูแลมืออาชีพด้วยระบบดิจิทัลที่ปลอดภัย</p>
+    </div>
+</div>
+
+<!-- Slide 2: ปัญหาและความสำคัญ -->
+<div class="slide">
+    <h2 class="slide-title">ที่มาและความสำคัญ</h2>
+    <div class="two-col">
+        <div>
+            <p>ประเทศไทยกำลังเข้าสู่ <span class="accent">"สังคมผู้สูงอายุ"</span> อย่างเต็มตัว ทำให้ความต้องการผู้ดูแลเพิ่มขึ้นมหาศาล</p>
+            <ul style="list-style: none; padding: 0; margin-top: 30px;">
+                <li style="margin-bottom: 20px;"><i class="fa-solid fa-circle-xmark" style="color: #ef4444; margin-right: 10px;"></i> หาผู้ดูแลที่ไว้ใจได้ยาก</li>
+                <li style="margin-bottom: 20px;"><i class="fa-solid fa-circle-xmark" style="color: #ef4444; margin-right: 10px;"></i> ตารางเวลาไม่ชัดเจน</li>
+                <li style="margin-bottom: 20px;"><i class="fa-solid fa-circle-xmark" style="color: #ef4444; margin-right: 10px;"></i> ขาดมาตรฐานการชำระเงินและความปลอดภัย</li>
+            </ul>
+        </div>
+        <div class="tile" style="background: #003366; color: #fff;">
+            <i class="fa-solid fa-lightbulb icon" style="color: #008080;"></i>
+            <h3 style="font-size: 30px; margin-bottom: 15px; color: #008080;">ทางออกของเรา</h3>
+            <p style="color: #cbd5e1;">ระบบตัวกลางที่คัดกรองผู้ดูแล จัดระเบียบตารางงาน และรองรับการชำระเงินที่ตรวจสอบได้</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: วัตถุประสงค์ -->
+<div class="slide">
+    <h2 class="slide-title">วัตถุประสงค์โครงการ</h2>
+    <div style="display: flex; gap: 30px; margin-top: 50px;">
+        <div class="tile">
+            <div class="icon"><i class="fa-solid fa-user-check"></i></div>
+            <h3>ความสะดวก</h3>
+            <p>ให้ผู้ใช้จองบริการได้ในไม่กี่คลิก พร้อมระบบชำระเงินในตัว</p>
+        </div>
+        <div class="tile">
+            <div class="icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3>ประสิทธิภาพ</h3>
+            <p>ช่วยผู้ดูแลจัดการคิวงานผ่านหน้าต่าง Admin ได้อย่างมีระเบียบ</p>
+        </div>
+        <div class="tile">
+            <div class="icon"><i class="fa-solid fa-universal-access"></i></div>
+            <h3>มิตรต่อผู้ใช้</h3>
+            <p>ออกแบบหน้าจอ (UI) ที่เรียบง่าย เหมาะกับคนทุกวัย</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: ฟังก์ชันการทำงาน -->
+<div class="slide">
+    <h2 class="slide-title">ฟังก์ชันหลักของระบบ</h2>
+    <div class="two-col" style="align-items: start;">
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 30px;">
+                <span class="accent">● ระบบสมาชิก:</span> เข้าใช้งานได้ทั้งฝั่งผู้ใช้และผู้ดูแลระบบ
+            </li>
+            <li style="margin-bottom: 30px;">
+                <span class="accent">● การเลือกบริการ:</span> ครอบคลุมตั้งแต่งานพื้นฐานจนถึงงานเฉพาะทาง
+            </li>
+            <li style="margin-bottom: 30px;">
+                <span class="accent">● ระบบที่อยู่และชำระเงิน:</span> ระบุพิกัดบ้านและจ่ายเงินล่วงหน้า
+            </li>
+            <li style="margin-bottom: 30px;">
+                <span class="accent">● Admin Dashboard:</span> ตรวจสอบคำขอและกดอนุมัติงาน
+            </li>
+        </ul>
+        <!-- ปรับกรอบรูปให้กว้างขึ้นและสัดส่วนพอดีกับหน้าจอแอป -->
+        <div style="background: #ffffff; border-radius: 15px; width: 100%; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+             <img src="https://media.discordapp.net/attachments/884652203619541022/1466270632390950982/image.png?ex=697c2270&is=697ad0f0&hm=952f23ab92e05a24d4db8dcb4333c850e1b4968f23084c767bde3956efe0b0cd&=&format=webp&quality=lossless&width=1240&height=749" alt="[รูปภาพแสดงฟังก์ชันหลักของระบบ CareConnect]" class="app-preview-img">
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: ระยะเวลาการดำเนินงาน -->
+<div class="slide">
+    <h2 class="slide-title">แผนการพัฒนาระบบ (8 สัปดาห์)</h2>
+    <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="t-item">
+            <div class="t-dot"></div>
+            <h3 class="accent">สัปดาห์ 1</h3>
+            <p>วางแผน & วิเคราะห์</p>
+        </div>
+        <div class="t-item">
+            <div class="t-dot"></div>
+            <h3 class="accent">สัปดาห์ 2-3</h3>
+            <p>ออกแบบ UI/UX</p>
+        </div>
+        <div class="t-item">
+            <div class="t-dot"></div>
+            <h3 class="accent">สัปดาห์ 4-7</h3>
+            <p>เขียนโค้ด & เชื่อมต่อ</p>
+        </div>
+        <div class="t-item">
+            <div class="t-dot"></div>
+            <h3 class="accent">สัปดาห์ 8</h3>
+            <p>ทดสอบ & ส่งมอบ</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: บทสรุป -->
+<div class="slide" style="background: #003366; color: #fff; text-align: center; justify-content: center;">
+    <h2 style="color: #008080; font-size: 60px; margin-bottom: 20px;">บทสรุป</h2>
+    <p style="font-size: 32px; max-width: 900px; margin: 0 auto; color: #cbd5e1;">
+        "CareConnect คือก้าวสำคัญของการนำเทคโนโลยีมาแก้ปัญหาสังคม เพื่อคุณภาพชีวิตที่ดีขึ้นของผู้สูงอายุ และความสบายใจของคนในครอบครัว"
+    </p>
+    <div style="margin-top: 50px;">
+        <p style="color: #fff; opacity: 0.6;">CareConnect Project Team 2024</p>
+    </div>
+</div>
+
+</body>
+</html>
